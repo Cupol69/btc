@@ -1,0 +1,6 @@
+{
+  "name": "Binance Market Analytics Dashboard",
+  "description": "Real-time cryptocurrency analytics, 5-layer on-chain DEX/CEX intelligence audit, AMM pool mechanics (x*y=k), MEV/Sandwich filtering, order flow forensics, and AI commentary powered by public market data and Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

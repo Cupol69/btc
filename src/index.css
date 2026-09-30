@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ==========================================================================
+   THEME STYLES (British Club, Bohemian Wine, Onyx Titanium, Cyber Navy)
+   ========================================================================== */
+
+/* 1. 🇬🇧 British Gentleman's Club (Racing Green, Deep Moss & Antique Brass) */
+[data-theme="british"],
+[data-theme="british"] body,
+body[data-theme="british"],
+html[data-theme="british"] {
+  background-color: #06100b !important;
+  color: #e2e8f0 !important;
+}
+[data-theme="british"] header,
+[data-theme="british"] .bg-slate-950,
+[data-theme="british"] .bg-slate-900,
+[data-theme="british"] [class*="bg-slate-950"],
+[data-theme="british"] [class*="bg-slate-900"] {
+  background-color: #0b1a13 !important;
+}
+[data-theme="british"] .bg-slate-800,
+[data-theme="british"] [class*="bg-slate-800"] {
+  background-color: #12281e !important;
+}
+[data-theme="british"] .bg-slate-700,
+[data-theme="british"] [class*="bg-slate-700"] {
+  background-color: #1a382a !important;
+}
+[data-theme="british"] .border-slate-800,
+[data-theme="british"] .border-slate-750,
+[data-theme="british"] .border-slate-700,
+[data-theme="british"] [class*="border-slate-800"],
+[data-theme="british"] [class*="border-slate-750"],
+[data-theme="british"] [class*="border-slate-700"] {
+  border-color: #1e4231 !important;
+}
+[data-theme="british"] .bg-indigo-600,
+[data-theme="british"] [class*="bg-indigo-600"] {
+  background-color: #185337 !important;
+}
+
+/* 2. 🍷 Bohemian Luxury & Vintage Cognac (Burgundy, Truffle & Warm Amber) */
+[data-theme="bohemian"],
+[data-theme="bohemian"] body,
+body[data-theme="bohemian"],
+html[data-theme="bohemian"] {
+  background-color: #100812 !important;
+  color: #f3e8ff !important;
+}
+[data-theme="bohemian"] header,
+[data-theme="bohemian"] .bg-slate-950,
+[data-theme="bohemian"] .bg-slate-900,
+[data-theme="bohemian"] [class*="bg-slate-950"],
+[data-theme="bohemian"] [class*="bg-slate-900"] {
+  background-color: #190d1e !important;
+}
+[data-theme="bohemian"] .bg-slate-800,
+[data-theme="bohemian"] [class*="bg-slate-800"] {
+  background-color: #27142e !important;
+}
+[data-theme="bohemian"] .bg-slate-700,
+[data-theme="bohemian"] [class*="bg-slate-700"] {
+  background-color: #381d42 !important;
+}
+[data-theme="bohemian"] .border-slate-800,
+[data-theme="bohemian"] .border-slate-750,
+[data-theme="bohemian"] .border-slate-700,
+[data-theme="bohemian"] [class*="border-slate-800"],
+[data-theme="bohemian"] [class*="border-slate-750"],
+[data-theme="bohemian"] [class*="border-slate-700"] {
+  border-color: #492457 !important;
+}
+[data-theme="bohemian"] .bg-indigo-600,
+[data-theme="bohemian"] [class*="bg-indigo-600"] {
+  background-color: #831843 !important;
+}
+
+/* 3. 🌑 Onyx & Platinum Stealth (Titanium Carbon & Frost Silver) */
+[data-theme="onyx"],
+[data-theme="onyx"] body,
+body[data-theme="onyx"],
+html[data-theme="onyx"] {
+  background-color: #090a0d !important;
+  color: #f1f5f9 !important;
+}
+[data-theme="onyx"] header,
+[data-theme="onyx"] .bg-slate-950,
+[data-theme="onyx"] .bg-slate-900,
+[data-theme="onyx"] [class*="bg-slate-950"],
+[data-theme="onyx"] [class*="bg-slate-900"] {
+  background-color: #101217 !important;
+}
+[data-theme="onyx"] .bg-slate-800,
+[data-theme="onyx"] [class*="bg-slate-800"] {
+  background-color: #181c24 !important;
+}
+[data-theme="onyx"] .bg-slate-700,
+[data-theme="onyx"] [class*="bg-slate-700"] {
+  background-color: #222733 !important;
+}
+[data-theme="onyx"] .border-slate-800,
+[data-theme="onyx"] .border-slate-750,
+[data-theme="onyx"] .border-slate-700,
+[data-theme="onyx"] [class*="border-slate-800"],
+[data-theme="onyx"] [class*="border-slate-750"],
+[data-theme="onyx"] [class*="border-slate-700"] {
+  border-color: #29303e !important;
+}
+[data-theme="onyx"] .bg-indigo-600,
+[data-theme="onyx"] [class*="bg-indigo-600"] {
+  background-color: #2e384d !important;
+}
+
+/* 4. ❄️ Nordic Glacier (Deep Arctic Slate & Frost Cyan) */
+[data-theme="nordic"],
+[data-theme="nordic"] body,
+body[data-theme="nordic"],
+html[data-theme="nordic"] {
+  background-color: #060e17 !important;
+  color: #e0f2fe !important;
+}
+[data-theme="nordic"] header,
+[data-theme="nordic"] .bg-slate-950,
+[data-theme="nordic"] .bg-slate-900,
+[data-theme="nordic"] [class*="bg-slate-950"],
+[data-theme="nordic"] [class*="bg-slate-900"] {
+  background-color: #0c1825 !important;
+}
+[data-theme="nordic"] .bg-slate-800,
+[data-theme="nordic"] [class*="bg-slate-800"] {
+  background-color: #132437 !important;
+}
+[data-theme="nordic"] .bg-slate-700,
+[data-theme="nordic"] [class*="bg-slate-700"] {
+  background-color: #1a344e !important;
+}
+[data-theme="nordic"] .border-slate-800,
+[data-theme="nordic"] .border-slate-750,
+[data-theme="nordic"] .border-slate-700,
+[data-theme="nordic"] [class*="border-slate-800"],
+[data-theme="nordic"] [class*="border-slate-750"],
+[data-theme="nordic"] [class*="border-slate-700"] {
+  border-color: #1d3e60 !important;
+}
+[data-theme="nordic"] .bg-indigo-600,
+[data-theme="nordic"] [class*="bg-indigo-600"] {
+  background-color: #0284c7 !important;
+}
+
+/* 5. 🏜️ Desert Amber & Terracotta (Warm Dune Gold & Deep Sand) */
+[data-theme="desert"],
+[data-theme="desert"] body,
+body[data-theme="desert"],
+html[data-theme="desert"] {
+  background-color: #120b06 !important;
+  color: #fef3c7 !important;
+}
+[data-theme="desert"] header,
+[data-theme="desert"] .bg-slate-950,
+[data-theme="desert"] .bg-slate-900,
+[data-theme="desert"] [class*="bg-slate-950"],
+[data-theme="desert"] [class*="bg-slate-900"] {
+  background-color: #1c120a !important;
+}
+[data-theme="desert"] .bg-slate-800,
+[data-theme="desert"] [class*="bg-slate-800"] {
+  background-color: #2c1c0f !important;
+}
+[data-theme="desert"] .bg-slate-700,
+[data-theme="desert"] [class*="bg-slate-700"] {
+  background-color: #3d2816 !important;
+}
+[data-theme="desert"] .border-slate-800,
+[data-theme="desert"] .border-slate-750,
+[data-theme="desert"] .border-slate-700,
+[data-theme="desert"] [class*="border-slate-800"],
+[data-theme="desert"] [class*="border-slate-750"],
+[data-theme="desert"] [class*="border-slate-700"] {
+  border-color: #52341b !important;
+}
+[data-theme="desert"] .bg-indigo-600,
+[data-theme="desert"] [class*="bg-indigo-600"] {
+  background-color: #d97706 !important;
+}
+
+/* 6. 🌸 Tokyo Cyberpunk (Midnight Obsidian & Synthwave Violet/Pink) */
+[data-theme="tokyo"],
+[data-theme="tokyo"] body,
+body[data-theme="tokyo"],
+html[data-theme="tokyo"] {
+  background-color: #0e0818 !important;
+  color: #fae8ff !important;
+}
+[data-theme="tokyo"] header,
+[data-theme="tokyo"] .bg-slate-950,
+[data-theme="tokyo"] .bg-slate-900,
+[data-theme="tokyo"] [class*="bg-slate-950"],
+[data-theme="tokyo"] [class*="bg-slate-900"] {
+  background-color: #160d26 !important;
+}
+[data-theme="tokyo"] .bg-slate-800,
+[data-theme="tokyo"] [class*="bg-slate-800"] {
+  background-color: #24143d !important;
+}
+[data-theme="tokyo"] .bg-slate-700,
+[data-theme="tokyo"] [class*="bg-slate-700"] {
+  background-color: #351b59 !important;
+}
+[data-theme="tokyo"] .border-slate-800,
+[data-theme="tokyo"] .border-slate-750,
+[data-theme="tokyo"] .border-slate-700,
+[data-theme="tokyo"] [class*="border-slate-800"],
+[data-theme="tokyo"] [class*="border-slate-750"],
+[data-theme="tokyo"] [class*="border-slate-700"] {
+  border-color: #4c267f !important;
+}
+[data-theme="tokyo"] .bg-indigo-600,
+[data-theme="tokyo"] [class*="bg-indigo-600"] {
+  background-color: #c026d3 !important;
+}
+
+/* 7. 🟢 Bloomberg & Cyber Matrix (Dark Phosphor & Emerald Green) */
+[data-theme="emerald"],
+[data-theme="emerald"] body,
+body[data-theme="emerald"],
+html[data-theme="emerald"] {
+  background-color: #040f09 !important;
+  color: #d1fae5 !important;
+}
+[data-theme="emerald"] header,
+[data-theme="emerald"] .bg-slate-950,
+[data-theme="emerald"] .bg-slate-900,
+[data-theme="emerald"] [class*="bg-slate-950"],
+[data-theme="emerald"] [class*="bg-slate-900"] {
+  background-color: #071910 !important;
+}
+[data-theme="emerald"] .bg-slate-800,
+[data-theme="emerald"] [class*="bg-slate-800"] {
+  background-color: #0c291b !important;
+}
+[data-theme="emerald"] .bg-slate-700,
+[data-theme="emerald"] [class*="bg-slate-700"] {
+  background-color: #123d29 !important;
+}
+[data-theme="emerald"] .border-slate-800,
+[data-theme="emerald"] .border-slate-750,
+[data-theme="emerald"] .border-slate-700,
+[data-theme="emerald"] [class*="border-slate-800"],
+[data-theme="emerald"] [class*="border-slate-750"],
+[data-theme="emerald"] [class*="border-slate-700"] {
+  border-color: #175237 !important;
+}
+[data-theme="emerald"] .bg-indigo-600,
+[data-theme="emerald"] [class*="bg-indigo-600"] {
+  background-color: #059669 !important;
+}
+
