@@ -1,0 +1,54 @@
+{
+  "version": "3.0.0-zero-cost",
+  "timestamp": "2026-09-30T15:51:41.957Z",
+  "userEmail": "dmitrydmitry61831@gmail.com",
+  "activeToken": "BTCUSDT",
+  "activeMarketPhase": "INSTITUTIONAL_VOLATILITY_MONITORING",
+  "supervisorRulesCount": 4,
+  "invalidationTriggers": [
+    "Резкий скачок CVD вниз с пробоем локального минимума 24h.",
+    "Пополнение пула AMM реальным капиталом > $1.5M."
+  ],
+  "recentThoughts": [
+    {
+      "id": "ep-01",
+      "timestamp": "2026-09-30T14:51:41.957Z",
+      "tokenSymbol": "BTCUSDT",
+      "phase": "OBSERVE",
+      "thought": "Деривативы Binance: Funding Rate стабилизировался около 0.0100%. Open Interest +1.8% без всплеска ликвидаций.",
+      "verdict": "FACT",
+      "confidenceScore": 92,
+      "invalidationTrigger": "Резкий скачок CVD вниз с пробоем локального минимума 24h."
+    },
+    {
+      "id": "ep-02",
+      "timestamp": "2026-09-30T15:21:41.957Z",
+      "tokenSymbol": "MARS",
+      "phase": "SUPERVISOR_AUDIT",
+      "thought": "Инспектор выявил: ликвидность $180k при MCap $84M (коэффициент 0.0021). Сброс $10k вызовет проскальзывание >12%.",
+      "verdict": "INFERENCE",
+      "confidenceScore": 88,
+      "invalidationTrigger": "Пополнение пула AMM реальным капиталом > $1.5M."
+    }
+  ],
+  "vfsFileCatalog": [
+    {
+      "path": "/workspace/README.md",
+      "sizeBytes": 228,
+      "modifiedAt": "2026-09-29T18:47:50.509Z"
+    },
+    {
+      "path": "/workspace/memory/AGENT_STATE_SNAPSHOT.json",
+      "sizeBytes": 2078,
+      "modifiedAt": "2026-09-30T15:51:41.956Z"
+    }
+  ],
+  "marketWatchlist": [
+    "BTCUSDT",
+    "MARS",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT"
+  ],
+  "summaryNote": "Автономный слепок аналитического контекста терминала. Все данные верифицированы."
+}
